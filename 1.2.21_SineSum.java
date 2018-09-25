@@ -1,6 +1,6 @@
 //TESFA GREAVES - OPTIONAL HOMEWORK 1.2.21//
 
-public class SineSume
+public class SineSum
 {
   public static void main(String ar[])
     {
@@ -17,6 +17,6 @@ public class SineSume
       
       System.out.println(result);
       
-    }
+    }//End Main
     
-}
+}//End Class
