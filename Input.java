@@ -1,8 +1,6 @@
-/*	
-	Author: Tesfa Greaves
+/*	Author: Tesfa Greaves
 	Date: 10/31/2018 (Holloween)
 	Desc: Class with Input Functions
-	Modified: 11/05/2018
 */
 
 import java.io.*;
@@ -11,37 +9,60 @@ public class Input
 	static InputStreamReader isr = new InputStreamReader(System.in);
 	static BufferedReader keyboard = new BufferedReader(isr);
 
-	//Gets String from user
-	public static String getString(String prompt)
-	{
-		System.out.print(prompt);
-		try
-		{
-			return keyboard.readLine();
-		}
-		catch(IOException e)
-		{
-			System.out.println("Something happened with the IO");
-		}
-		return "";
-	}
-
 	//Gets integer from user
 	public static int getInt(String prompt)
 	{
-		return Integer.parseInt(getString(prompt));
+		try
+		{
+			System.out.println(prompt);
+			return Integer.parseInt(keyboard.readLine());
+		}
+		
+		catch(IOException e)
+		{
+			System.out.println("Something went wrong");
+		}
+		
+		catch (NumberFormatException e)
+		{
+			System.out.println("Your input is not a Number");
+		}
+		
+		return -1; //Default Value
 	}
 
 	//Create getDouble function
 	public static double getDouble(String prompt)
 	{
-		return Double.parseDouble(getString(prompt));
+		try
+		{
+			System.out.println(prompt);
+			return Double.parseDouble(keyboard.readLine());
+		}
+		
+		catch(IOException e)
+		{
+			System.out.println("Something went wrong");
+		}
+		
+		return -1; //Default Value
 	}
 
-	//Create getFloat function
-	public static float getFloat(String prompt)
+	//Create getString function
+	public static String getString(String prompt)
 	{
-		return Float.parseFloat(getString(prompt));
+		try
+		{
+			System.out.println(prompt);
+			return keyboard.readLine();
+		}
+		
+		catch(IOException e)
+		{
+			System.out.println("Something went wrong");
+		}
+		
+		return null; //Default Value
 	}
 
 	public static void main(String[] args)
