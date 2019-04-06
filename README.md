@@ -22,3 +22,7 @@ Finally, I am apart of the 'Lehman College Underground Student Radio', talk to m
 Peace! Have a good weekend class! 
 
 ~(=^‥^)ノ☆
+
+Update!
+
+"I received an (A) for the semester (FA2018)! Hurray!!" - Tesfa
